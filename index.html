@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Your Task Manager</h1>
+
+    <div class="status">
+      <div>
+        <h2 id="Total">0</h2>
+        <p>Total</p>
+      </div>
+
+      <div>
+        <h2 id="Complete">0</h2>
+        <p>Complete</p>
+      </div>
+
+      <div>
+        <h2 id="Pending">0</h2>
+        <p>Pending</p>
+      </div>
+    </div>
+
+
+    <div class="form">
+      <input type="text" id="TaskInput" placeholder="Enter your Task">
+      <select id="Category">
+        <option>Study</option>
+        <option>Work</option>
+        <option>Personal</option>
+      </select>
+
+      <button id="AddBtn">Add Your Task</button>
+    </div>
+
+    <button id="ThemeBtn">Dark Mode</button>
+
+    <div id="TaskContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
