@@ -1,31 +1,51 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-html, body{
+html,
+body {
   height: 100%;
   width: 100%;
-  background-color: white;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: linear-gradient(to right, rgb(224, 217, 217), rgb(190, 142, 190));
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
 }
 
-.container{
-width: 100%;
-height: 100%;
-padding: 20px;
-background-color: #c2c0e7;
-
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
 
-h1{
+h1 {
   text-align: center;
+  margin-top: 40px;
   font-size: 35px;
+  color: black;
+  font-weight: 800;
 }
 
-.status{
+.heading {
+  color: rgb(180, 58, 180);
+  font-size: 35px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.status {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -33,68 +53,68 @@ h1{
   margin-top: 30px;
 }
 
-.status div{
-  background-color: white;
+.status div {
+  background-color: rgb(249, 68, 159);
   padding: 15px;
   text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex: 1;
 }
 
-.status h2{
-  color: #6c63ff;
+.status h2 {
+  color: white;
   margin-bottom: 4px;
 }
 
-.status p{
-  color: grey;
+.status p {
+  color: white;
   font-size: 20px;
 }
 
-.form{
+.form {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  background-color: white;
+  background-color: rgb(144, 95, 144);
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
 }
 
-input, select, button{
+input,
+select,
+button {
   padding: 10px;
   font-size: 16px;
   border-radius: 7px;
 }
 
-input, select{
+input,
+select {
   border: 1px solid #ccc;
 }
 
-#AddBtn{
+#AddBtn {
   background-color: #1eb838;
   color: white;
   border: none;
   cursor: pointer;
-
+  width: 10%;
+  margin-left: 43%;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #0d00ff;
+  font-weight: 600;
 }
 
-#AddBtn:hover{
-  background-color: #574eea;
-}
-
-#ThemeBtn{
-  width: 100%;
-  margin-bottom: 18px;
-  border: none;
-  background-color: rgb(29, 27, 27);
+#AddBtn:hover {
+  background-color: black;
   color: white;
-  cursor: pointer;
-
+  font-weight: 600;
 }
 
-.complete{
+.complete {
   background-color: green;
   margin-right: 8px;
   padding: 8px 10px;
@@ -102,10 +122,9 @@ input, select{
   border: none;
   color: white;
   border-radius: 5px;
-
 }
 
-.delete{
+.delete {
   background-color: red;
   margin-right: 8px;
   padding: 8px 10px;
@@ -115,26 +134,62 @@ input, select{
   border-radius: 5px;
 }
 
-
-#TaskContainer{
-display: flex;
-flex-direction: column;
-gap: 13px;
+#TaskContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
 }
 
-.Task{
+.Task {
   background-color: white;
   padding: 14px;
   border-radius: 10px;
-
 }
 
-.Task h3{
+.Task h3 {
   margin-bottom: 10px;
 }
 
-.Task p{
+.Task p {
   color: grey;
   margin-bottom: 10px;
 }
-  
+
+/* Responsive for mobile */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .heading {
+    font-size: 24px;
+  }
+  .status {
+    flex-wrap: wrap;
+  }
+  .status div {
+    flex: 1 1 calc(50% - 10px);
+  }
+  #AddBtn {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 12px;
+  }
+  h1,
+  .heading {
+    font-size: 20px;
+  }
+  .status {
+    flex-direction: column;
+  }
+  #AddBtn {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
